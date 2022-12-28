@@ -57,7 +57,5 @@ namespace HelloPage
             DL.tex_sum.Text = Convert.ToString((int)c.sum);
             DL.Show();
         }
-
-        
     }
 }
