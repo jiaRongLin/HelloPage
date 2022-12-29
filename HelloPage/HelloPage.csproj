@@ -58,7 +58,6 @@
     <Compile Include="Guess.Designer.cs">
       <DependentUpon>Guess.cs</DependentUpon>
     </Compile>
-    <Compile Include="Guess_Random.cs" />
     <Compile Include="Guess_Select.cs">
       <SubType>Form</SubType>
     </Compile>

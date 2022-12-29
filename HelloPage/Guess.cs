@@ -17,7 +17,8 @@ namespace HelloPage
         {
             InitializeComponent();
         }
-       
+        public Label Lab_guess => this.lab_guess;
+        public Label Lab_num => this.lab_num;
         Guess_Select s = new Guess_Select();
         
         public static int ReturnMultipleValues(int a,int b)
@@ -25,10 +26,11 @@ namespace HelloPage
             Random random = new Random();
             return random.Next(a, b);
         }
-        int num;
+        public int num;
         internal void btn_guess_Click(object sender, EventArgs e)
         {
             num = ReturnMultipleValues(0,100);
+            s.Owner = this;
             s.ShowDialog();
             
             
@@ -38,7 +40,5 @@ namespace HelloPage
             MessageBox.Show("Answer:"+num);
         }
 
-        
-            
     }
 }

@@ -37,19 +37,17 @@
             // lab_guess
             // 
             this.lab_guess.AutoSize = true;
-            this.lab_guess.Location = new System.Drawing.Point(197, 118);
-            this.lab_guess.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lab_guess.Location = new System.Drawing.Point(158, 87);
             this.lab_guess.Name = "lab_guess";
-            this.lab_guess.Size = new System.Drawing.Size(319, 19);
+            this.lab_guess.Size = new System.Drawing.Size(248, 15);
             this.lab_guess.TabIndex = 5;
             this.lab_guess.Text = "Please Select A number between 1to 100!!";
             // 
             // btn_ans
             // 
-            this.btn_ans.Location = new System.Drawing.Point(433, 258);
-            this.btn_ans.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_ans.Location = new System.Drawing.Point(346, 204);
             this.btn_ans.Name = "btn_ans";
-            this.btn_ans.Size = new System.Drawing.Size(176, 76);
+            this.btn_ans.Size = new System.Drawing.Size(141, 60);
             this.btn_ans.TabIndex = 4;
             this.btn_ans.Text = "Answer";
             this.btn_ans.UseVisualStyleBackColor = true;
@@ -57,10 +55,9 @@
             // 
             // btn_guess
             // 
-            this.btn_guess.Location = new System.Drawing.Point(191, 258);
-            this.btn_guess.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_guess.Location = new System.Drawing.Point(153, 204);
             this.btn_guess.Name = "btn_guess";
-            this.btn_guess.Size = new System.Drawing.Size(176, 76);
+            this.btn_guess.Size = new System.Drawing.Size(141, 60);
             this.btn_guess.TabIndex = 3;
             this.btn_guess.Text = "Guess";
             this.btn_guess.UseVisualStyleBackColor = true;
@@ -69,21 +66,21 @@
             // lab_num
             // 
             this.lab_num.AutoSize = true;
-            this.lab_num.Location = new System.Drawing.Point(197, 170);
-            this.lab_num.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lab_num.Location = new System.Drawing.Point(158, 134);
             this.lab_num.Name = "lab_num";
-            this.lab_num.Size = new System.Drawing.Size(0, 19);
+            this.lab_num.Size = new System.Drawing.Size(0, 15);
             this.lab_num.TabIndex = 6;
             // 
             // Guess
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(640, 355);
             this.Controls.Add(this.lab_num);
             this.Controls.Add(this.lab_guess);
             this.Controls.Add(this.btn_ans);
             this.Controls.Add(this.btn_guess);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Guess";
             this.Text = "Guess";
             this.ResumeLayout(false);
