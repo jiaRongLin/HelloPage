@@ -18,23 +18,42 @@ namespace HelloPage
         {
             InitializeComponent();
         }
-        Guess_Random r= new Guess_Random();
-        //LabChange c = new LabChange();
+        public int min;
+        public int max;
+        public int guess;
+        public int num;
         internal void btn_enter_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
-            /*c.min = 0;
-            c.max = 100;
-            c.guess = int.Parse(tex_select.Text);
-            c.num = r.num;
-            var returnGuess = c.ReturnGuess();*/
-        }
+            Guess g = new Guess();
+            if (min < guess & guess < max)
+            {
+                if (num == guess)
+                {
+                    MessageBox.Show("Bingo!!!");
+                }
+                else if (num > guess)
+                {
+                    min = guess;
+                    g.lab_guess.Text = "Too Small!!!";
 
+                }
+                else if (num < guess)
+                {
+                    max = guess;
+                    g.lab_guess.Text = "Too Big!!!";
+                }
+                g.lab_num.Text = "Between " + min + " to" + max;
+            }
+            else
+            {
+                MessageBox.Show("請輸入 " + min + " ~ " + max + " 的數字");
+            }
+            var result = Tuple.Create<int, int, int, int>(min, max, num, guess);
+        }
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-       
     }
 }

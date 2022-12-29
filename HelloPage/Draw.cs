@@ -34,6 +34,5 @@ namespace HelloPage
             x=e.X;
             y=e.Y;
         }
-        //test
     }
 }
