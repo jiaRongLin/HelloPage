@@ -12,10 +12,14 @@ namespace HelloPage
 {
     public partial class Draw : Form
     {
+        Graphics g;
+        Pen draw_pen;
+        bool isMousedown = false;
         public Draw()
         {
             InitializeComponent();
-            
+            g = this.CreateGraphics();
+            draw_pen = new Pen(Color.Black, 2);
         }
         
         private void button1_Click(object sender, EventArgs e)
@@ -26,13 +30,20 @@ namespace HelloPage
             
         }
 
-        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        private void Draw_Paint(object sender, PaintEventArgs e)
         {
-            Graphics g = this.pictureBox1.CreateGraphics();
-            g.Dispose();
-            Pen draw_pen = new Pen(Color.Black);
             draw_pen.Color = colorDialog1.Color;
-            draw_pen.Dispose();
+        }
+
+        private void Draw_MouseDown(object sender, MouseEventArgs e)
+        {
+            isMousedown = true;
+            //Point.Add(e.Location);
+        }
+
+        private void Draw_MouseMove(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }
