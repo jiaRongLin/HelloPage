@@ -11,12 +11,6 @@ namespace HelloPage
     public class Guess_Random
     {
         
-        public static int ReturnMultipleValues()
-        {
-            Random random = new Random();
-            int num = random.Next(0, 100);
-            return num;
-        }
     }
 
 }
