@@ -10,13 +10,12 @@ namespace HelloPage
 {
     public class Guess_Random
     {
-        public int num;
-        public Tuple<int> ReturnMultipleValues()
+        
+        public static int ReturnMultipleValues()
         {
             Random random = new Random();
-            num = random.Next(0, 100);
-            var result = Tuple.Create<int>(num);
-            return result;
+            int num = random.Next(0, 100);
+            return num;
         }
     }
 

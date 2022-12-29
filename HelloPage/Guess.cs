@@ -28,7 +28,7 @@ namespace HelloPage
         }
         private void btn_guess_Click(object sender, EventArgs e)
         {
-            var returnedvalues = r.ReturnMultipleValues();
+            //ReturnMultipleValues();
             //s.MdiParent = this;
             //s.ShowDialog(this);
             if (s.ShowDialog(this) == DialogResult.OK)
@@ -36,7 +36,8 @@ namespace HelloPage
                 guess = int.Parse(s.tex_select.Text);
                 if (min < guess & guess < max)
                 {
-                    int num = r.num;
+                    int num = 0;
+                    //int num = r.num;
                     if (num == guess)
                     {
                         MessageBox.Show("Bingo!!!");
@@ -62,8 +63,8 @@ namespace HelloPage
         }
         private void btn_ans_Click(object sender, EventArgs e)
         {
-            int num = r.num;
-            MessageBox.Show("Answer:"+r.num);
+            int num = 0; //r.num;
+            MessageBox.Show("Answer:" );//+r.num);
         }
 
         
