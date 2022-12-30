@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HelloPage));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.btn_Draw = new System.Windows.Forms.Button();
             this.btn_XO = new System.Windows.Forms.Button();
             this.btn_note = new System.Windows.Forms.Button();
             this.btn_Guess = new System.Windows.Forms.Button();
@@ -39,7 +40,7 @@
             this.btn_Hello = new System.Windows.Forms.Button();
             this.btn_struct = new System.Windows.Forms.Button();
             this.btn_pos = new System.Windows.Forms.Button();
-            this.btn_Draw = new System.Windows.Forms.Button();
+            this.btn_screen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -85,6 +86,7 @@
             this.splitContainer2.Panel1.BackColor = System.Drawing.Color.Transparent;
             this.splitContainer2.Panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("splitContainer2.Panel1.BackgroundImage")));
             this.splitContainer2.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.splitContainer2.Panel1.Controls.Add(this.btn_screen);
             this.splitContainer2.Panel1.Controls.Add(this.btn_Draw);
             this.splitContainer2.Panel1.Controls.Add(this.btn_XO);
             this.splitContainer2.Panel1.Controls.Add(this.btn_note);
@@ -104,6 +106,18 @@
             this.splitContainer2.SplitterDistance = 212;
             this.splitContainer2.SplitterWidth = 5;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // btn_Draw
+            // 
+            this.btn_Draw.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btn_Draw.Location = new System.Drawing.Point(13, 443);
+            this.btn_Draw.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Draw.Name = "btn_Draw";
+            this.btn_Draw.Size = new System.Drawing.Size(165, 32);
+            this.btn_Draw.TabIndex = 8;
+            this.btn_Draw.Text = "Draw";
+            this.btn_Draw.UseVisualStyleBackColor = true;
+            this.btn_Draw.Click += new System.EventHandler(this.btn_Draw_Click);
             // 
             // btn_XO
             // 
@@ -201,17 +215,17 @@
             this.btn_pos.UseVisualStyleBackColor = true;
             this.btn_pos.Click += new System.EventHandler(this.btn_pos_Click);
             // 
-            // btn_Draw
+            // btn_screen
             // 
-            this.btn_Draw.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btn_Draw.Location = new System.Drawing.Point(13, 431);
-            this.btn_Draw.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Draw.Name = "btn_Draw";
-            this.btn_Draw.Size = new System.Drawing.Size(165, 32);
-            this.btn_Draw.TabIndex = 8;
-            this.btn_Draw.Text = "Draw";
-            this.btn_Draw.UseVisualStyleBackColor = true;
-            this.btn_Draw.Click += new System.EventHandler(this.btn_Draw_Click);
+            this.btn_screen.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btn_screen.Location = new System.Drawing.Point(13, 496);
+            this.btn_screen.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_screen.Name = "btn_screen";
+            this.btn_screen.Size = new System.Drawing.Size(165, 32);
+            this.btn_screen.TabIndex = 9;
+            this.btn_screen.Text = "Screen Saver";
+            this.btn_screen.UseVisualStyleBackColor = true;
+            this.btn_screen.Click += new System.EventHandler(this.btn_screen_Click);
             // 
             // HelloPage
             // 
@@ -247,5 +261,6 @@
         private System.Windows.Forms.Button btn_note;
         private System.Windows.Forms.Button btn_XO;
         private System.Windows.Forms.Button btn_Draw;
+        private System.Windows.Forms.Button btn_screen;
     }
 }

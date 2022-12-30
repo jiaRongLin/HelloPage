@@ -83,6 +83,7 @@
             this.tool_lab = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.嘉容出品ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -400,7 +401,7 @@
             // 
             this.contentsToolStripMenuItem.Name = "contentsToolStripMenuItem";
             this.contentsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F1)));
-            this.contentsToolStripMenuItem.Size = new System.Drawing.Size(255, 36);
+            this.contentsToolStripMenuItem.Size = new System.Drawing.Size(287, 36);
             this.contentsToolStripMenuItem.Text = "內容(&C)";
             // 
             // indexToolStripMenuItem
@@ -408,7 +409,7 @@
             this.indexToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("indexToolStripMenuItem.Image")));
             this.indexToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
             this.indexToolStripMenuItem.Name = "indexToolStripMenuItem";
-            this.indexToolStripMenuItem.Size = new System.Drawing.Size(255, 36);
+            this.indexToolStripMenuItem.Size = new System.Drawing.Size(287, 36);
             this.indexToolStripMenuItem.Text = "索引(&I)";
             // 
             // searchToolStripMenuItem
@@ -416,18 +417,20 @@
             this.searchToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("searchToolStripMenuItem.Image")));
             this.searchToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(255, 36);
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(287, 36);
             this.searchToolStripMenuItem.Text = "搜尋(&S)";
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(252, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(284, 6);
             // 
             // aboutToolStripMenuItem
             // 
+            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.嘉容出品ToolStripMenuItem});
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(255, 36);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(287, 36);
             this.aboutToolStripMenuItem.Text = "關於(&A)... ...";
             // 
             // toolStrip
@@ -544,6 +547,12 @@
             this.textBox1.Size = new System.Drawing.Size(1054, 543);
             this.textBox1.TabIndex = 4;
             // 
+            // 嘉容出品ToolStripMenuItem
+            // 
+            this.嘉容出品ToolStripMenuItem.Name = "嘉容出品ToolStripMenuItem";
+            this.嘉容出品ToolStripMenuItem.Size = new System.Drawing.Size(287, 36);
+            this.嘉容出品ToolStripMenuItem.Text = "嘉容出品";
+            // 
             // Notepad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -625,6 +634,7 @@
         private System.Windows.Forms.ToolStripButton helpToolStripButton;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ToolStripMenuItem 嘉容出品ToolStripMenuItem;
     }
 }
 

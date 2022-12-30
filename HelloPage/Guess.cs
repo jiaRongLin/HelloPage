@@ -31,7 +31,6 @@ namespace HelloPage
             num = ReturnMultipleValues(0,100);
             s.Owner = this;
             s.ShowDialog();
-            s.Location = new Point(50, 50);
         }
         private void btn_ans_Click(object sender, EventArgs e)
         {

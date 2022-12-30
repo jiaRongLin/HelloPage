@@ -109,6 +109,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screen Saver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screen Saver.Designer.cs">
+      <DependentUpon>Screen Saver.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentGrade.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Screen Saver.resx">
+      <DependentUpon>Screen Saver.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentGrade.resx">
       <DependentUpon>StudentGrade.cs</DependentUpon>
     </EmbeddedResource>

@@ -96,6 +96,12 @@ namespace HelloPage
             this.splitContainer2.Panel2.Controls.Add(d);
             d.Show();
         }
+
+        private void btn_screen_Click(object sender, EventArgs e)
+        {
+            Screen_Saver s = new Screen_Saver();
+            s.Show();
+        }
     }
    
 }
