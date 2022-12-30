@@ -16,7 +16,7 @@ namespace HelloPage
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HelloPage());
+            Application.Run(new Guess());
         }
     }
 }

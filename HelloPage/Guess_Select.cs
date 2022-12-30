@@ -22,52 +22,53 @@ namespace HelloPage
         public int max =100;
         public int guess;
         public int num;
+        string text = string.Empty;
+
 
         internal void btn_enter_Click(object sender, EventArgs e)
         {            
-            string text = string.Empty;
-            string text1 = string.Empty;
-            ((Guess)this.Owner).Lab_guess.Text = "Please Select A number between 1to 100!!";
-            ((Guess)this.Owner).Lab_num.Text = string.Empty;
-            num = ((Guess)this.Owner).num;
-            guess = int.Parse(tex_select.Text);
-            if (min < guess & guess < max)
+            try
             {
-                if (num == guess)
+                num = ((Guess)this.Owner).num;
+                guess = int.Parse(tex_select.Text);
+                if (min < guess & guess < max)
                 {
-                    MessageBox.Show("Bingo!!!");
-                    tex_select.Clear();
-                    this.Close();
-                }
-                else if (num > guess)
-                {
-                    min = guess;
-                    text = "Too Small!!!";
+                    if (num == guess)
+                    {
+                        MessageBox.Show("Bingo!!!");
+                        text = "Please Select A number between 1 to 100!!";
+                        tex_select.Clear();
+                        this.Close();
+                    }
+                    else if (num > guess)
+                    {
+                        min = guess;
+                        text = "Too Small!!!\n" + "Between " + min + " to " + max;
 
+                    }
+                    else if (num < guess)
+                    {
+                        max = guess;
+                        text = "Too Big!!!\n" + "Between " + min + " to " + max;
+                    }
                 }
-                else if (num < guess)
+                else
                 {
-                    max = guess;
-                    text = "Too Big!!!";
+                    MessageBox.Show("請輸入 " + min + " ~ " + max + " 的數字");
                 }
-                text1 = "Between " + min + " to" + max;
-            }
-            else
-            {
-                MessageBox.Show("請輸入 " + min + " ~ " + max + " 的數字");
-            }
             ((Guess)this.Owner).Lab_guess.Text = text;
-            ((Guess)this.Owner).Lab_num.Text = text1;
-            tex_select.Clear();
-        }
+                tex_select.Clear();
+            }
+            catch (Exception) { MessageBox.Show("請輸入 " + min + " ~ " + max + " 的數字"); }
+
+            }
         
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             min = 0;
             max = 100;
             tex_select.Clear();
-            ((Guess)this.Owner).Lab_guess.Text = "Please Select A number between 1to 100!!";
-            ((Guess)this.Owner).Lab_num.Text = string.Empty ;
+            ((Guess)this.Owner).Lab_guess.Text = "Please Select A number between 1 to 100!!";
             this.Close();
         }
 

@@ -75,6 +75,7 @@ namespace HelloPage
         private void btn_note_Click(object sender, EventArgs e)
         {
             Notepad n = new Notepad();
+            this.splitContainer2.Panel2.Controls.Clear();
             n.Show();
         }
 

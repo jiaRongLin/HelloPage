@@ -101,14 +101,14 @@
             this.splitContainer2.Panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("splitContainer2.Panel2.BackgroundImage")));
             this.splitContainer2.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.splitContainer2.Size = new System.Drawing.Size(2405, 735);
-            this.splitContainer2.SplitterDistance = 188;
+            this.splitContainer2.SplitterDistance = 212;
             this.splitContainer2.SplitterWidth = 5;
             this.splitContainer2.TabIndex = 0;
             // 
             // btn_XO
             // 
             this.btn_XO.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btn_XO.Location = new System.Drawing.Point(4, 393);
+            this.btn_XO.Location = new System.Drawing.Point(13, 391);
             this.btn_XO.Margin = new System.Windows.Forms.Padding(4);
             this.btn_XO.Name = "btn_XO";
             this.btn_XO.Size = new System.Drawing.Size(165, 32);
@@ -120,7 +120,7 @@
             // btn_note
             // 
             this.btn_note.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btn_note.Location = new System.Drawing.Point(4, 343);
+            this.btn_note.Location = new System.Drawing.Point(13, 341);
             this.btn_note.Margin = new System.Windows.Forms.Padding(4);
             this.btn_note.Name = "btn_note";
             this.btn_note.Size = new System.Drawing.Size(165, 32);
@@ -132,7 +132,7 @@
             // btn_Guess
             // 
             this.btn_Guess.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btn_Guess.Location = new System.Drawing.Point(4, 291);
+            this.btn_Guess.Location = new System.Drawing.Point(13, 289);
             this.btn_Guess.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Guess.Name = "btn_Guess";
             this.btn_Guess.Size = new System.Drawing.Size(165, 32);
@@ -144,7 +144,7 @@
             // btn_loan
             // 
             this.btn_loan.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btn_loan.Location = new System.Drawing.Point(4, 71);
+            this.btn_loan.Location = new System.Drawing.Point(13, 69);
             this.btn_loan.Margin = new System.Windows.Forms.Padding(4);
             this.btn_loan.Name = "btn_loan";
             this.btn_loan.Size = new System.Drawing.Size(165, 32);
@@ -156,7 +156,7 @@
             // btn_MyCal
             // 
             this.btn_MyCal.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btn_MyCal.Location = new System.Drawing.Point(4, 231);
+            this.btn_MyCal.Location = new System.Drawing.Point(13, 229);
             this.btn_MyCal.Margin = new System.Windows.Forms.Padding(4);
             this.btn_MyCal.Name = "btn_MyCal";
             this.btn_MyCal.Size = new System.Drawing.Size(165, 32);
@@ -168,7 +168,7 @@
             // btn_Hello
             // 
             this.btn_Hello.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btn_Hello.Location = new System.Drawing.Point(4, 15);
+            this.btn_Hello.Location = new System.Drawing.Point(13, 13);
             this.btn_Hello.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Hello.Name = "btn_Hello";
             this.btn_Hello.Size = new System.Drawing.Size(165, 32);
@@ -180,7 +180,7 @@
             // btn_struct
             // 
             this.btn_struct.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btn_struct.Location = new System.Drawing.Point(4, 177);
+            this.btn_struct.Location = new System.Drawing.Point(13, 175);
             this.btn_struct.Margin = new System.Windows.Forms.Padding(4);
             this.btn_struct.Name = "btn_struct";
             this.btn_struct.Size = new System.Drawing.Size(165, 32);
@@ -192,7 +192,7 @@
             // btn_pos
             // 
             this.btn_pos.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btn_pos.Location = new System.Drawing.Point(4, 123);
+            this.btn_pos.Location = new System.Drawing.Point(13, 121);
             this.btn_pos.Margin = new System.Windows.Forms.Padding(4);
             this.btn_pos.Name = "btn_pos";
             this.btn_pos.Size = new System.Drawing.Size(165, 32);
@@ -204,7 +204,7 @@
             // btn_Draw
             // 
             this.btn_Draw.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btn_Draw.Location = new System.Drawing.Point(4, 433);
+            this.btn_Draw.Location = new System.Drawing.Point(13, 431);
             this.btn_Draw.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Draw.Name = "btn_Draw";
             this.btn_Draw.Size = new System.Drawing.Size(165, 32);
