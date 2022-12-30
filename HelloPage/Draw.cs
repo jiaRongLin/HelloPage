@@ -14,36 +14,71 @@ namespace HelloPage
     {
         Graphics g;
         Pen draw_pen;
-        bool isMousedown = false;
+        int x, y,penpoint;
+        Bitmap b;
+        Color pencolor;
+        
         public Draw()
         {
             InitializeComponent();
-            g = this.CreateGraphics();
-            draw_pen = new Pen(Color.Black, 2);
         }
         
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_color_Click(object sender, EventArgs e)
         {
             
             colorDialog1.ShowDialog();
-            button2.BackColor = colorDialog1.Color;
-            
+            btn_imag.BackColor = colorDialog1.Color;
+            btn_color.ForeColor= colorDialog1.Color;
+            pencolor= colorDialog1.Color;
+
         }
 
-        private void Draw_Paint(object sender, PaintEventArgs e)
+        private void Draw_Load(object sender, EventArgs e)
         {
-            draw_pen.Color = colorDialog1.Color;
+            draw_pen = new Pen(pencolor, penpoint);
+            pencolor = Color.Black;
+            penpoint = 2;
+            b = new Bitmap(this.Width, this.Height);
+            g = Graphics.FromImage(b);
+            picture_draw.Size = new Size(this.Width, this.Height);
+            picture_draw.Location = new Point(0, 25);
+            g.Clear(Color.White);
+            picture_draw.Image = b;
+            picture_draw.Refresh();
+
         }
 
-        private void Draw_MouseDown(object sender, MouseEventArgs e)
+        private void btn_clear_Click(object sender, EventArgs e)
         {
-            isMousedown = true;
-            //Point.Add(e.Location);
+            g.Clear(Color.White);
+            picture_draw.Refresh();
+
         }
 
-        private void Draw_MouseMove(object sender, MouseEventArgs e)
+        private void trackBar_Scroll(object sender, EventArgs e)
         {
-
+            penpoint =trackBar.Value+2;
         }
+
+        private void picture_draw_MouseDown(object sender, MouseEventArgs e)
+        {
+            x = e.X;
+            y = e.Y;
+        }
+        private void picture_draw_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                draw_pen = new Pen(pencolor, penpoint);
+                g = Graphics.FromImage(b);
+                g.DrawLine(draw_pen, x, y, e.X, e.Y);
+                x = e.X; y = e.Y;
+                picture_draw.Refresh();
+            }
+        }
+
+        
+
+
     }
 }

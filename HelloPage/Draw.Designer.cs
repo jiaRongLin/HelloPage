@@ -28,61 +28,95 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_color = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.button2 = new System.Windows.Forms.Button();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            this.btn_imag = new System.Windows.Forms.Button();
+            this.trackBar = new System.Windows.Forms.TrackBar();
+            this.picture_draw = new System.Windows.Forms.PictureBox();
+            this.btn_clear = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_draw)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_color
             // 
-            this.button1.Location = new System.Drawing.Point(657, 44);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 51);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_color.Font = new System.Drawing.Font("標楷體", 14.02597F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn_color.ForeColor = System.Drawing.Color.Black;
+            this.btn_color.Location = new System.Drawing.Point(821, 56);
+            this.btn_color.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_color.Name = "btn_color";
+            this.btn_color.Size = new System.Drawing.Size(132, 65);
+            this.btn_color.TabIndex = 0;
+            this.btn_color.Text = "顏色";
+            this.btn_color.UseVisualStyleBackColor = true;
+            this.btn_color.Click += new System.EventHandler(this.btn_color_Click);
             // 
             // colorDialog1
             // 
             this.colorDialog1.AnyColor = true;
             // 
-            // button2
+            // btn_imag
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Enabled = false;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(657, 113);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(106, 50);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_imag.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_imag.Enabled = false;
+            this.btn_imag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_imag.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_imag.Location = new System.Drawing.Point(821, 143);
+            this.btn_imag.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_imag.Name = "btn_imag";
+            this.btn_imag.Size = new System.Drawing.Size(132, 63);
+            this.btn_imag.TabIndex = 1;
+            this.btn_imag.UseVisualStyleBackColor = false;
             // 
-            // trackBar1
+            // trackBar
             // 
-            this.trackBar1.Location = new System.Drawing.Point(680, 189);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackBar1.Size = new System.Drawing.Size(56, 157);
-            this.trackBar1.TabIndex = 2;
+            this.trackBar.BackColor = System.Drawing.SystemColors.Control;
+            this.trackBar.Location = new System.Drawing.Point(850, 239);
+            this.trackBar.Margin = new System.Windows.Forms.Padding(4);
+            this.trackBar.Name = "trackBar";
+            this.trackBar.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.trackBar.Size = new System.Drawing.Size(72, 199);
+            this.trackBar.TabIndex = 2;
+            this.trackBar.Scroll += new System.EventHandler(this.trackBar_Scroll);
+            // 
+            // picture_draw
+            // 
+            this.picture_draw.BackColor = System.Drawing.Color.White;
+            this.picture_draw.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picture_draw.Location = new System.Drawing.Point(0, 0);
+            this.picture_draw.Name = "picture_draw";
+            this.picture_draw.Size = new System.Drawing.Size(1000, 570);
+            this.picture_draw.TabIndex = 3;
+            this.picture_draw.TabStop = false;
+            this.picture_draw.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picture_draw_MouseDown);
+            this.picture_draw.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picture_draw_MouseMove);
+            // 
+            // btn_clear
+            // 
+            this.btn_clear.Location = new System.Drawing.Point(835, 473);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(118, 53);
+            this.btn_clear.TabIndex = 4;
+            this.btn_clear.Text = "Clear";
+            this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // Draw
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.trackBar1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1000, 570);
+            this.Controls.Add(this.btn_clear);
+            this.Controls.Add(this.trackBar);
+            this.Controls.Add(this.btn_imag);
+            this.Controls.Add(this.btn_color);
+            this.Controls.Add(this.picture_draw);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Draw";
             this.Text = "Draw";
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Draw_Paint);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Draw_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draw_MouseMove);
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            this.Load += new System.EventHandler(this.Draw_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_draw)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -90,9 +124,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_color;
         private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.Button btn_imag;
+        private System.Windows.Forms.TrackBar trackBar;
+        private System.Windows.Forms.PictureBox picture_draw;
+        private System.Windows.Forms.Button btn_clear;
     }
 }
