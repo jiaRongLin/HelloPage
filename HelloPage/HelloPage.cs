@@ -86,6 +86,15 @@ namespace HelloPage
             this.splitContainer2.Panel2.Controls.Add(xo);
             xo.Show();
         }
+
+        private void btn_Draw_Click(object sender, EventArgs e)
+        {
+            Draw d = new Draw();
+            d.MdiParent = this;
+            this.splitContainer2.Panel2.Controls.Clear();
+            this.splitContainer2.Panel2.Controls.Add(d);
+            d.Show();
+        }
     }
    
 }
