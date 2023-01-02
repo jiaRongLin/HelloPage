@@ -24,15 +24,13 @@ namespace HelloPage
             Rectangle ret = Screen.GetWorkingArea(this);
             this.pictureBox1.ClientSize = new Size(ret.Width, ret.Height);
             this.pictureBox1.Dock = DockStyle.Fill;
-            this.pictureBox1.BringToFront();
 
             this.pictureBox2.Location = new Point(x, y);
-            this.pictureBox2.BringToFront();
             timer1.Enabled = true;
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -52,6 +50,10 @@ namespace HelloPage
                     y -= 1;
                 }
                 this.pictureBox2.Location = new Point(x, y);
+                if (i == 1)
+                {
+                    this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
+                }
             }
         }
     }
