@@ -21,13 +21,22 @@ namespace HelloPage
         {
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
-            Rectangle ret = Screen.GetWorkingArea(this);
-            this.pictureBox1.ClientSize = new Size(ret.Width, ret.Height);
             this.pictureBox1.Dock = DockStyle.Fill;
+            this.TopMost = true;
 
-            this.pictureBox2.Location = new Point(x, y);
             timer1.Enabled = true;
 
+        }
+        int px = 5, py = 5;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
+            pictureBox2.Left += px;
+            pictureBox2.Top += py;
+            if (pictureBox2.Left <= 0) { px = Math.Abs(px); }
+            if (pictureBox2.Right > this.ClientSize.Width) { px = -Math.Abs(px); }
+            if (pictureBox2.Top < 0) { py = Math.Abs(py); }
+            if (pictureBox2.Bottom > this.ClientSize.Height) { py = -Math.Abs(py); }
         }
 
         private void pictureBox1_MouseHover(object sender, EventArgs e)
@@ -35,26 +44,7 @@ namespace HelloPage
             this.Close();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            for (int i = 0; i < 10; i += 1)
-            {
-                if (x<400)
-                {
-                    x += 1;
-                    y += 1;
-                }
-                else
-                {
-                    x += 1;
-                    y -= 1;
-                }
-                this.pictureBox2.Location = new Point(x, y);
-                if (i == 1)
-                {
-                    this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
-                }
-            }
-        }
+        
+
     }
 }
