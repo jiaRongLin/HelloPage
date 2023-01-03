@@ -28,9 +28,16 @@ namespace HelloPage
 
         }
         int px = 5, py = 5;
+
+
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
-            this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
             pictureBox2.Left += px;
             pictureBox2.Top += py;
             if (pictureBox2.Left <= 0) { px = Math.Abs(px); }
@@ -38,13 +45,5 @@ namespace HelloPage
             if (pictureBox2.Top < 0) { py = Math.Abs(py); }
             if (pictureBox2.Bottom > this.ClientSize.Height) { py = -Math.Abs(py); }
         }
-
-        private void pictureBox1_MouseHover(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        
-
     }
 }

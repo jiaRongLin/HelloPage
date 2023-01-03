@@ -16,6 +16,7 @@ namespace HelloPage
         {
             InitializeComponent();
             IsMdiContainer = true;
+            this.DoubleBuffered = true;
         }
 
         private void btn_Hello_Click(object sender, EventArgs e)
