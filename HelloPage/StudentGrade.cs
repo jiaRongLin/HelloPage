@@ -38,13 +38,13 @@ namespace HelloPage
             int min = values.Min();
             if (isChi & isEng & isMath)
             {
-            //    this.list_score.BeginUpdate();
-            //    ListViewItem item = new ListViewItem();
-            //    item.SubItems.Add(tex_name.Text);
-            //    item.SubItems.Add(tex_chinese.Text);
-            //    item.SubItems.Add(tex_English.Text);
-            //    item.SubItems.Add(tex_Math.Text);
-            //    this.list_score.EndUpdate();
+                this.list_score.BeginUpdate();
+                ListViewItem item = new ListViewItem();
+                item.SubItems.Add(tex_name.Text);
+                item.SubItems.Add(tex_chinese.Text);
+                item.SubItems.Add(tex_English.Text);
+                item.SubItems.Add(tex_Math.Text);
+                this.list_score.EndUpdate();
             }
             else
             {
